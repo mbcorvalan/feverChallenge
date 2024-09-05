@@ -1,0 +1,70 @@
+.partners {
+  display: flex;
+  padding: 6rem 3rem;
+  flex-direction: column;
+
+  &__text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.6rem;
+
+    h4 {
+      color: $c-black;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: 3rem;
+    }
+  }
+
+  &__logos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    justify-content: center;
+    flex-direction: column;
+
+    @include md {
+      flex-direction: row;
+    }
+  }
+
+  &__logo {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1.6rem;
+    max-width: 12rem;
+    height: 12rem;
+    display: flex;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  &__event {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+
+    p {
+      color: $c-black;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+    }
+
+    img {
+      width: 45px;
+    }
+  }
+}

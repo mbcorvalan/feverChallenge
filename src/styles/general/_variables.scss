@@ -1,0 +1,23 @@
+// Colors
+$c-fever-blue-primary: #1DB1DD;
+$c-fever-blue-dark: #06232c;
+$c-fever-blue-light: #364550;
+$c-deep-royal-blue: #225193;
+$c-golden-yellow: #ffdb00;
+$c-sky-blue: #479cd5;
+$c-fever-blue-gradient: linear-gradient(0deg, rgba(83, 101, 113, 1) 0%, rgba(54, 69, 80, 1) 100%);
+$c-black: #252525;
+$c-white: #fff;
+$c-white-off: #efefef;
+$c-dark-gray-transparent: rgba(51, 51, 51, .9);
+
+// Typography
+$f-montserrat: "Montserrat", sans-serif;
+$f-roboto: "Roboto", sans-serif;
+
+
+//Breakpoints
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;

@@ -1,0 +1,36 @@
+    /* Hide the page content by default */
+    .hidden-until-loaded {
+      visibility: hidden;
+    }
+
+    /* Styling for the loading text */
+    #loadingText {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    /* Styling for the map section */
+    #mapContainer {
+      height: 400px;
+      width: 100%;
+    }
+
+    #google-map {
+      width: 100%;
+      height: 400px;
+    }
+
+    .btn {
+      text-transform: uppercase;
+      padding: 0.6rem 1.8rem;
+      border: unset;
+      font-size: 1.6rem;
+      font-family: "Montserrat", sans-serif;
+      cursor: pointer;
+      border-radius: 5px;
+    }

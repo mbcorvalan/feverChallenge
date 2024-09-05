@@ -1,0 +1,125 @@
+.cartTab {
+  background-color: #f4f2eb;
+  color: $c-black;
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+  transition: 0.5s;
+  padding: 3rem;
+
+  h1 {
+    margin: 0;
+    text-align: center;
+    color: $c-black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    padding: 2rem 1rem 1rem 1rem;
+    text-transform: uppercase;
+    font-size: 4rem;
+  }
+
+  button {
+    background-color: #E8BC0E;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .name,
+  .totalPrice {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+  .plus,
+  .minus {
+    font-size: 20px;
+  }
+
+  .empty-cart-message {
+    margin: 0;
+    text-align: center;
+    color: $c-black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    padding: 1.6rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+
+  .total-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: $c-black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+  }
+
+}
+
+.listCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem;
+  overflow: auto;
+
+  .item img {
+    width: 100%;
+  }
+
+  .item {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .quantity span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 50%;
+    color: $c-deep-royal-blue;
+    cursor: pointer;
+    padding-top: 10px;
+  }
+
+  .quantity span:nth-child(2) {
+    background-color: transparent;
+    cursor: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: $c-black;
+  }
+
+  .item:nth-child(even) {
+    background-color: #eee1;
+  }
+
+
+}
+
+.listCart::-webkit-scrollbar {
+  width: 0;
+}
+
+body.showCart .cartTab {
+  right: 0;
+}
+
+body.showCart .container {
+  transform: translateX(-250px);
+}
+
+.checkOut__content {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}

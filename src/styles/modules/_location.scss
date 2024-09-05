@@ -1,0 +1,67 @@
+.location {
+  .skewed {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    border-bottom: 2px solid #f4f2eb;
+
+    &__text {
+      padding: 6rem 3rem 3rem 3rem;
+
+      h3 {
+        color: $c-black;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        padding-bottom: 2rem;
+        text-transform: capitalize;
+        font-size: 3rem;
+      }
+
+      p {
+        color: $c-black;
+        font-family: "Montserrat", sans-serif;
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        padding-bottom: 2rem;
+
+      }
+
+      a {
+        background-color: $c-deep-royal-blue;
+        color: $c-white;
+        margin-top: 1.6rem;
+        text-decoration: none;
+
+      }
+    }
+
+    &__img {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      clip-path: unset;
+
+      & img {
+        width: 100%;
+        height: auto;
+        transform: unset;
+
+        @include md {
+          transform: scale(1.1);
+        }
+      }
+
+      @include md {
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+
+    @include md {
+      grid-template-columns: 1fr 1fr;
+    }
+
+  }
+}

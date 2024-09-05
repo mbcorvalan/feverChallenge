@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los Pollos Hermanos</title>
+  <meta name="description" content="Los Pollos Hermanos - Delicious fried chicken. Explore our menu and locations." />
+</head>
+
+<body>
+  <!-- Loading text that will be visible until the page content is fully loaded -->
+  <div id="loadingText">Loading...</div>
+
+  <!-- Main container that will be hidden until styles are fully loaded -->
+  <div id="pageContent" class="hidden-until-loaded">
+
+    <header>
+      <nav class="nav">
+        <ul class="nav__content nav__content--desktop">
+          <li> <a href="#" aria-label="Home">
+              <img loading="lazy" width="65px" class="navbar-menu__logo" src="./src/assets/images/header/lph-logo.png"
+                alt="Los Pollos Hermanos">
+            </a></li>
+          <li class="hidden"><a href="#menu">Menu</a></li>
+          <li class="hidden"><a href="#location">Location</a></li>
+          <li class="hidden"><a>
+              <div class="quantity__container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 512 512">
+                  <circle cx="176" cy="416" r="16" fill="none" stroke="#252525" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="32"></circle>
+                  <circle cx="400" cy="416" r="16" fill="none" stroke="#252525" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="32"></circle>
+                  <path fill="none" stroke="#252525" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                    d="M48 80h64l48 272h256"></path>
+                  <path fill="none" stroke="#252525" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                    d="M160 288h249.44a8 8 0 0 0 7.85-6.43l28.8-144a8 8 0 0 0-7.85-9.57H128"></path>
+                </svg>
+                <span class="quantity">0</span>
+              </div>
+            </a></li>
+          <li><a class="menu-burger" onclick="openMobileNav()" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24">
+                <g fill="none">
+                  <path
+                    d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                  <path fill="currentColor"
+                    d="M20 18a1 1 0 0 1 .117 1.993L20 20H4a1 1 0 0 1-.117-1.993L4 18zm0-7a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0-7a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2z" />
+                </g>
+              </svg></a></li>
+        </ul>
+        <ul class="nav__content nav__content--mobile">
+          <li><a href="#" onclick="closeMobileNav()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6z" />
+              </svg></a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a>
+              <div class="quantity__container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 512 512">
+                  <circle cx="176" cy="416" r="16" fill="none" stroke="#252525" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="32"></circle>
+                  <circle cx="400" cy="416" r="16" fill="none" stroke="#252525" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="32"></circle>
+                  <path fill="none" stroke="#252525" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                    d="M48 80h64l48 272h256"></path>
+                  <path fill="none" stroke="#252525" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                    d="M160 288h249.44a8 8 0 0 0 7.85-6.43l28.8-144a8 8 0 0 0-7.85-9.57H128"></path>
+                </svg>
+                <span class="quantity">0</span>
+              </div>
+            </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero__text">
+        <h1>Order fried chicken now</h1>
+        <p>Get famous chicken however you want it.</p>
+        <a href="#" class="btn order-button">Order Now</a>
+        <section id="section-scroll" class="scroll">
+          <a onclick="scrollHeader()"><span></span></a>
+        </section>
+      </div>
+    </section>
+
+    <section id="menu" class="menu">
+      <h2 class="menu__title">Menu</h2>
+      <p class="menu__text">Menu varies by location. Please contact your local restaurant</p>
+      <div id="menuButtons" class="menu__buttons">
+        <button onclick="filterProduct('all')" class="menu__button">ALL</button>
+        <button class="menu__button" onclick="filterProduct('food')">Food</button>
+        <button class="menu__button" onclick="filterProduct('drinks')">Drinks</button>
+      </div>
+      <div id="menuProducts" class="menu__products"></div>
+    </section>
+
+    <div class="cartTab">
+      <h1>Shopping Cart</h1>
+      <div class="listCart">
+        <div class="empty-cart-message">
+          <p>Empty Cart</p>
+        </div>
+      </div>
+      <div class="total-container">
+        <p class="total-value">Total: $0.00</p>
+        <p>Products with IVA</p>
+      </div>
+      <div class="checkOut__content">
+        <button class="btn checkOut">Check Out</button>
+      </div>
+    </div>
+
+    <section id="location" class="location">
+      <div class="skewed">
+        <div class="skewed__text">
+          <h3>New Los Pollos Hermanos restaurant in Madrid!</h3>
+          <p>The first establishment in Spain to incorporate the new company image. The restaurants sporting the new
+            image
+            have been warmly welcomed by the public, with growth above 30% in those premises with the new Los Pollos
+            Hermanos identity.
+            Los Pollos Hermanos, flagship brand of Eat Out restoration group, announced the opening its first restaurant
+            in Madrid, at
+            <bold>Puerta de Alcalá.</bold>
+          </p>
+          <a class="btn" href="https://maps.app.goo.gl/2qNAgW5F2dbY1jjA7" target="_blank" rel="noopener noreferrer">Get
+            directions</a>
+        </div>
+        <div class="skewed__img">
+          <div> <img loading="lazy" src="./src/assets/images/location/location-img.jpg" alt="Los Pollos Hermanos"></div>
+        </div>
+      </div>
+    </section>
+
+    <div id="google-map" style="height: 400px; width: 100%;"></div>
+
+
+    <section class="partners">
+      <div class="partners__text">
+        <h4>Our Partners</h4>
+      </div>
+      <div class="partners__logos">
+        <div class="partners__logo">
+          <img loading="lazy" src="./src/assets/images/general/Pepsi_2023.svg" alt="Pepsi" />
+        </div>
+        <div class="partners__logo">
+          <img loading="lazy" width="45px" src="./src/assets/images/general/fever-logo.svg" alt="Milka" />
+        </div>
+        <div class="partners__logo">
+          <img loading="lazy" src="./src/assets/images/general/corona.svg" alt="Corona" />
+        </div>
+      </div>
+      <div class="partners__event">
+        <p>Event by:</p>
+        <img loading="lazy" src="./src/assets/images/header/lph-logo.png" alt="Los Pollos Hermanos" />
+      </div>
+    </section>
+
+    <footer>
+      © 2022 LPH / Los pollos hermanos. All Rights Reserved. Los Pollos Hermanos is an original license. Privacy
+      policy
+    </footer>
+  </div>
+  <!-- JavaScript Section -->
+  <script>
+    // Show the content once the page and styles have fully loaded
+    window.addEventListener('load', function () {
+      document.getElementById('pageContent').style.visibility = 'visible';
+      document.getElementById('loadingText').style.display = 'none'; // Hide the loading text
+    });
+  </script>
+
+  <script>
+    function initMap() {
+      const markers = [
+        {
+          locationName: 'Pollos Hermanos Madrid',
+          lat: 40.41898439237952,
+          lng: -3.6891060721777182,
+          address: 'C. de Valenzuela, 4, Retiro, 28014 Madrid, Spain',
+        },
+      ];
+
+      const centerMap = {
+        lat: 40.41911697387695,
+        lng: -3.689100503921509,
+      };
+
+      const mapOptions = {
+        center: centerMap,
+        zoom: 10,
+        disableDefaultUI: true,
+        mapId: 'fever-map-434601',
+      };
+
+      const map = new google.maps.Map(
+        document.getElementById('google-map'),
+        mapOptions
+      );
+
+      const infoWindow = new google.maps.InfoWindow({
+        minWidth: 200,
+        maxWidth: 200,
+      });
+
+      if (google.maps.marker && google.maps.marker.AdvancedMarkerElement) {
+        const markerContent = document.createElement('div');
+        markerContent.innerHTML = `
+      <img loading="lazy"src="https://seeklogo.com/images/L/los-pollos-hermanos-logo-E4DCC13511-seeklogo.com.png" alt="Los Pollos Hermanos Logo" style="width:32px;height:32px;">
+    `;
+
+        const marker = new google.maps.marker.AdvancedMarkerElement({
+          position: {
+            lat: markers[0].lat,
+            lng: markers[0].lng,
+          },
+          map: map,
+          content: markerContent, // Use content to set custom HTML
+        });
+
+        function createInfoWindows() {
+          const infoWindowContent = `
+        <div class="feh-content">
+          <h3>${markers[0].locationName}</h3>
+          <address>
+            <p>${markers[0].address}</p>
+          </address>
+        </div>
+      `;
+
+          google.maps.event.addListener(marker, 'click', function () {
+            infoWindow.setContent(infoWindowContent);
+            infoWindow.open(map, marker);
+          });
+        }
+
+        createInfoWindows();
+
+      } else {
+        console.error('AdvancedMarkerElement is not available.');
+      }
+    }
+  </script>
+
+
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBek5NIeZsDKzmI_HYiXqsyajImCsdJNj8&callback=initMap&libraries=marker">
+    </script>
+  <!-- Main JavaScript file -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
